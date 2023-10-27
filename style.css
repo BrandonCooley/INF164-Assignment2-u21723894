@@ -1,71 +1,122 @@
 section {
     height: 500px;
-    background-color: red;
-    border: solid black 1px;
 }
 
 body {
-    font-family: 'Roberto', sans-serif;
-}
-
-.hero-area {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-text {
-    margin-left: 80px;
-    margin-bottom: 200px;
+    font-family: 'Roboto', sans-serif;  /* Corrected the font name */
+    margin: 0;
 }
 
 .hero {
     background-color: #0f0e17;
-    height: 100vh;
-    font-size: 40px;
+    height: calc(100vh - 60px);
+    font-size: 28px;
     color: white;
+    display: flex;
+    justify-content: flex-start; /* This will align the content to the top */
+    align-items: center; /* This will center the content horizontally */
+    flex-direction: column;
+    padding-top: 80px; /* Adjust the distance from the header here */
 }
 
-footer {
-    height: 500px;
-
-    background-color: black;
+header {
+    width: 100%;
+    background-color: #fffffe;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
 }
 
-nav {
+.header-container {
+    width: 90%;
+    margin-left: 40px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.navigation {
-    color: white;
+.logo {
+    font-size: 28px;
+    color: black;
+    font-weight: bold;
 }
 
-ul {
+.navigation ul {
     display: flex;
     list-style-type: none;
-    width: 500px;
-    justify-content: space-around;
-    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
 }
 
-li {
+.navigation a {
+    color: black;
     text-decoration: none;
+    transition: color 0.2s ease;
+    font-size: 24px;
 }
 
-h1 {
-    font-size: 90px;
+.navigation a:hover {
+    color: #ef4565;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto; /* This will help to horizontally center the .profile-container */
+    max-width: 1200px; /* optional, but helps in making sure it doesn't stretch too wide on large screens */
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url('/Assets/pexels-simon-robben-614810.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-right: 100px;
+    transition: background-image 0.9s ease;
+}
+
+.profile-image:hover {
+    background-image: url('/Assets/rm328-366-tong-08_1.jpg');
+}
+
+.profile-text {
+    flex-grow: 1;
+    width: calc(100% - 220px);
+    text-align: left;
+}
+
+h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.job-title {
+    font-size: 18px;
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.profile-text ul {
+    list-style-type: none;
+    padding: 0;
     margin: 0;
 }
 
-p {
-    margin: 0;
-    font-size: 30px;
-    font-weight: 300;
+.profile-text li {
+    font-size: 16px;
+    margin-bottom: 4px;
 }
 
+.profile-text .label {
+    font-weight: bold;
+}
 
 
 .button {
@@ -78,7 +129,6 @@ p {
     font-weight: 300;
     padding-top: 10px;
     margin-top: 20px;
-
 }
 
 .button:hover {
@@ -90,3 +140,153 @@ p {
     color: #808080;
 }
 
+h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.job-title {
+    font-size: 18px;
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.profile-text ul {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-text li {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.profile-text .label {
+    display: block;
+    font-weight: bold;
+}
+
+.info-section {
+    margin: 40px 0; /* Optional - to give space from content above and below */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* This centers the table on the page */
+    font-size: 24px;
+}
+
+.info-section table {
+    width: 100%; /* Makes sure the table takes the full width of its parent */
+    border-collapse: separate; /* Ensures the cells don't share borders */
+    border-spacing: 20px; /* Gives spacing between cells */
+    border: 5px solid white; /* Sets the black border */
+    border-radius: 15px; /* Rounds the border */
+    margin-bottom: 60px !important;
+}
+
+.left-info, .right-info {
+    vertical-align: top; /* Aligns content to the top of the cell */
+    padding: 20px; /* Adds some space around the content inside cells */
+}
+
+.left-info {
+    width: 50%; /* Set a fixed width for left column */
+}
+
+.right-info {
+    width: 50%; /* Set a fixed width for right column */
+}
+
+.infolist {
+    font-size: 18px;
+    justify-content: left;
+}
+
+footer {
+    background-color: #0f0e17; /* Using the same color as your hero section for consistency */
+    color: white; /* Making the text color white for contrast */
+    padding: 20px 0; /* Some padding at the top and bottom */
+    text-align: center; /* Center aligning the text */
+    font-size: 18px; 
+    border-top: 1px solid white; 
+}
+
+footer p {
+    margin: 0; 
+    padding: 0 20px; 
+}
+
+.table-container {
+    margin-bottom: 50px ;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.about-section {
+    padding: 80px;
+    height: calc(100vh - 40px);
+    padding-top: 120px;
+    background-color: #0f0e17;
+    color: white;
+}
+
+.facts, .routine {
+    margin-top: 20px;
+}
+
+.counter-section {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #0f0e17;
+}
+
+.counter-left {
+    background-color: red;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.counter-left:hover {
+    background-color: #BDBDBD
+}
+
+.counter-right {
+    background-color: darkgreen;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.counter-right:hover {
+    background-color: #BDBDBD
+}
+
+.counter {
+    padding: 10px;
+    margin: 10px;
+    color: black;
+}
+
+.container {
+    padding: 80px;
+    height: calc(100vh - 40px);
+    padding-top: 120px;
+}

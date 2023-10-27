@@ -10,26 +10,85 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="header"></div>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(content => {
+                document.getElementById('header').innerHTML = content;
+
+                // Setting the active navigation item
+                const currentPage = window.location.pathname.split('/').pop();
+                switch (currentPage) {
+                    case "index.html":
+                        document.getElementById('nav-home').classList.add('active');
+                        break;
+                    case "aboutme.html":
+                        document.getElementById('nav-about').classList.add('active');
+                        break;
+                    case "contact.html":
+                        document.getElementById('nav-contact').classList.add('active');
+                        break;
+                }
+            });
+    </script>
+
+
+    
     <section class="hero">
-        <nav class="navigation">
-            <div>LOGO</div>
-            <ul>
-                <li>Home</li>
-                <li>About Me</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
-        <div class="hero-area">
-            <div class="hero-text">
-                <h1>Brandon Cooley</h1>
-                <p>Full STACK Dev</p>
-                <div class="button">Home</div>
+        <div class="profile-container">
+            <div class="profile-image" id="profileImg">
+            </div>
+            <div class="profile-text">
+                <h2>Brandon Cooley</h2>
+                <p class="job-title">Full Stack Web Developer</p>
+                <ul>
+                    <li><span class="label">Name: Brandon Cooley</span></li>
+                    <li><span class="label">Age: 21</span></li>
+                    <li><span class="label">Address: Pretoria, Southafrica</span></li>
+                    <li><span class="label">Phone: 081-047-6765</span></li>
+                    <li><span class="label">Email: Brandon.Cooley@live.com</span></li>
+                </ul>                
             </div>
         </div>
+
+        <section class="info-section">
+            <div class="table-container">
+                <table class="experience-table">
+                    <tr>
+                        <td class="left-info">
+                            <h3>Education</h3>
+                                <ol class="infolist">
+                                    <li>Dainfern College - AS LEVEL</li>
+                                    <li>University of Pretoria - Geoinformatics</li>
+                                </ol>
+                            <h3>Skills</h3>
+                            <ol class="infolist">
+                                <li>Network Design</li>
+                                <li>Full Stack Web Design</li>
+                                <li>Cyber Security</li>
+                                <li>Intrusion Specialist</li>
+                            </ol>
+                        </td>
+                        <td class="right-info">
+                            <h3>Job Experience</h3>
+                            <ol class="infolist">
+                                <li>CC Crane Hire - Web Designer - 2018-2020</li>
+                                <li>Atomic Oil - Network Engineer - 2021</li>
+                                <li>Atomic Oil - Security Engineer - 2022</li>
+                                <li>Upwork - Web Designer - 2022</li>
+                                <li>AME Power Solutions - Web Designer - 2022-2023</li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
     </section>
-    <section></section>
-    <section></section>
-    <footer></footer>
-    <script src="script.js"></script>
+    
 </body>
+<footer>
+    <p> 2023 BMCooley Digital Design</p>
+</footer>
 </html>
