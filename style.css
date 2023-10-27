@@ -3,7 +3,7 @@ section {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;  /* Corrected the font name */
+    font-family: 'Roboto', sans-serif;  
     margin: 0;
 }
 
@@ -13,10 +13,10 @@ body {
     font-size: 28px;
     color: white;
     display: flex;
-    justify-content: flex-start; /* This will align the content to the top */
-    align-items: center; /* This will center the content horizontally */
+    justify-content: flex-start;
+    align-items: center; 
     flex-direction: column;
-    padding-top: 80px; /* Adjust the distance from the header here */
+    padding-top: 80px; 
 }
 
 header {
@@ -65,8 +65,8 @@ header {
     align-items: center;
     padding: 20px;
     text-align: center;
-    margin: 0 auto; /* This will help to horizontally center the .profile-container */
-    max-width: 1200px; /* optional, but helps in making sure it doesn't stretch too wide on large screens */
+    margin: 0 auto; 
+    max-width: 1200px; 
 }
 
 .profile-image {
@@ -90,7 +90,7 @@ header {
     text-align: left;
 }
 
-h2 {
+h2, .logo {
     margin: 0;
     font-size: 24px;
     font-weight: bold;
@@ -103,7 +103,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-.profile-text ul {
+.profile-text ul, .navigation ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -117,7 +117,6 @@ h2 {
 .profile-text .label {
     font-weight: bold;
 }
-
 
 .button {
     width: 150px;
@@ -135,70 +134,40 @@ h2 {
     background-color: white;
     color: black;
 }
+
 .button:active {
     background-color: #898989;
     color: #808080;
 }
 
-h2 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.job-title {
-    font-size: 18px;
-    color: #666;
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-.profile-text ul {
-    display: block;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.profile-text li {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 4px;
-}
-
-.profile-text .label {
-    display: block;
-    font-weight: bold;
-}
-
 .info-section {
-    margin: 40px 0; /* Optional - to give space from content above and below */
+    margin: 40px 0;
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto; /* This centers the table on the page */
+    margin: 0 auto; 
     font-size: 24px;
 }
 
 .info-section table {
-    width: 100%; /* Makes sure the table takes the full width of its parent */
-    border-collapse: separate; /* Ensures the cells don't share borders */
-    border-spacing: 20px; /* Gives spacing between cells */
-    border: 5px solid white; /* Sets the black border */
-    border-radius: 15px; /* Rounds the border */
+    width: 100%; 
+    border-collapse: separate; 
+    border-spacing: 20px; 
+    border: 5px solid white; 
+    border-radius: 15px; 
     margin-bottom: 60px !important;
 }
 
 .left-info, .right-info {
-    vertical-align: top; /* Aligns content to the top of the cell */
-    padding: 20px; /* Adds some space around the content inside cells */
+    vertical-align: top; 
+    padding: 20px; 
 }
 
 .left-info {
-    width: 50%; /* Set a fixed width for left column */
+    width: 50%;
 }
 
 .right-info {
-    width: 50%; /* Set a fixed width for right column */
+    width: 50%; 
 }
 
 .infolist {
@@ -207,10 +176,10 @@ h2 {
 }
 
 footer {
-    background-color: #0f0e17; /* Using the same color as your hero section for consistency */
-    color: white; /* Making the text color white for contrast */
-    padding: 20px 0; /* Some padding at the top and bottom */
-    text-align: center; /* Center aligning the text */
+    background-color: #0f0e17; 
+    color: white; 
+    padding: 20px 0; 
+    text-align: center; 
     font-size: 18px; 
     border-top: 1px solid white; 
 }
@@ -221,14 +190,14 @@ footer p {
 }
 
 .table-container {
-    margin-bottom: 50px ;
+    margin-bottom: 50px;
 }
 
 .active {
     font-weight: bold;
 }
 
-.about-section {
+.about-section, .container {
     padding: 80px;
     height: calc(100vh - 40px);
     padding-top: 120px;
@@ -252,8 +221,7 @@ footer p {
     background-color: #0f0e17;
 }
 
-.counter-left {
-    background-color: red;
+.counter-left, .counter-right {
     border: 1px solid transparent;
     border-radius: 5px;
     padding: 5px 10px;
@@ -262,21 +230,16 @@ footer p {
     transition: background-color 0.3s;
 }
 
-.counter-left:hover {
-    background-color: #BDBDBD
+.counter-left {
+    background-color: red;
 }
 
 .counter-right {
     background-color: darkgreen;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
-.counter-right:hover {
-    background-color: #BDBDBD
+
+.counter-left:hover, .counter-right:hover {
+    background-color: #BDBDBD;
 }
 
 .counter {
@@ -285,8 +248,66 @@ footer p {
     color: black;
 }
 
-.container {
-    padding: 80px;
-    height: calc(100vh - 40px);
-    padding-top: 120px;
+.contact-page {
+    background-color: #0f0e17;
 }
+.contact-page .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    padding-top: 100px;
+}
+
+.contact-page h2 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.contact-page .input-container {
+    margin-bottom: 1rem;
+}
+
+.contact-page label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.contact-page input[type="text"], 
+.contact-page input[type="email"], 
+.contact-page textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.contact-page textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-page button {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-page button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.contact-page button:hover:not(:disabled) {
+    background-color: #45a049;
+}
+
